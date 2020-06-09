@@ -11,12 +11,12 @@ from lw803_files.test_oracle_priceFilter import *
 
 #### Test Category Appropriateness with keywords ####
 
-testCategoryAppropriateness("ugg boots", "cars-vans-utes")
-# testCategoryAppropriateness("ugg boots", "home-garden")
-# testCategoryAppropriateness("ugg boots", "jobs")
-# testCategoryAppropriateness("ugg boots", "real-estate")
-# testCategoryAppropriateness("ugg boots", "books-music-games")
-# testCategoryAppropriateness("ugg boots", "clothing-jewellery")
+# testCategoryAppropriateness("ugg boots", "cars-vans-utes", "c18320")
+# testCategoryAppropriateness("ugg boots", "home-garden", "c18397")
+# testCategoryAppropriateness("ugg boots", "jobs", "c9302")
+# testCategoryAppropriateness("ugg boots", "real-estate", "c9296")
+# testCategoryAppropriateness("ugg boots", "books-music-games", "c18393")
+# testCategoryAppropriateness("ugg boots", "clothing-jewellery", "c18308")
 
 
 

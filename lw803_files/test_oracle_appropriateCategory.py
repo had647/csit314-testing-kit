@@ -1,12 +1,12 @@
 from lw803_files.appropriateCategory import *
 
-def testCategoryAppropriateness(randomKeyword, randomCategory):
+def testCategoryAppropriateness(randomKeyword, randomCategory, catCode):
 
     keyword = randomKeyword
     category = randomCategory
     general = generalSearch(keyword)
     print("The number of results for keyword " + keyword + " in Australia are: " + str(general))
-    wrong = wrongCategorySearch(keyword, category)
+    wrong = wrongCategorySearch(keyword, category, catCode)
     print("The number of results for keyword " + keyword + " in category " + category +
           " in Australia are: " + str(wrong))
 
@@ -17,9 +17,9 @@ def testCategoryAppropriateness(randomKeyword, randomCategory):
         print("The number of results for " + keyword + " are " + str(general) +
               ". However, it should not be found in the category " + category + ". This is not the case.")
 
-def wrongCategorySearch(keyword, category):
+def wrongCategorySearch(keyword, category,catCode):
 
-    url = "https://www.gumtree.com.au/s-" + category + "/" + queryBuilder(keyword) + "/k0c18320"
+    url = "https://www.gumtree.com.au/s-" + category + "/" + queryBuilder(keyword) + "/k0" + catCode
     underPriceResults = keyword_checker(url)
 
     return underPriceResults
