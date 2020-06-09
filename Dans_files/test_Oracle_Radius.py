@@ -1,6 +1,6 @@
 """
 This test is setting up the functions to return the total results found in the location of Wollongong NSW.
-I will increment the radius of the location by its predefined options.
+Radius is chosen randomly.
 In theory, as the radius expands, the results found should increase.
 """
 from Dans_files.testingResultsWithinRadius_ import *
@@ -8,8 +8,8 @@ import random
 
 # Run 5 different tests with new random parameters each time.
 for i in range(5):
-    radius_1 = random.randint(1,500)
-    radius_2 = random.randint(1,500)
+    radius_1 = random.randint(1,250)
+    radius_2 = random.randint(1,250)
 
     radius1 = getTotalResultsFound("https://www.gumtree.com.au/s-wollongong-wollongong/l3004860r" + str(radius_1))
     radius1Total = extractTotalIntValue(radius1)
@@ -44,7 +44,3 @@ for i in range(5):
             print("Test has failed.")
             print("Results found for radius of", radius_1, "is:", radius1Total)
             print("Results found for radius of", radius_2, "is:", radius2Total)
-
-
-
-
