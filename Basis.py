@@ -15,4 +15,10 @@ content = response.content
 soup = BeautifulSoup(response.text, 'html.parser')
 
 results_list = soup.find(class_='breadcrumbs__summary--enhanced')
-print(results_list)
+
+result = results_list.get_text()
+print(result)
+
+# Getting the int value of result
+total = int(result.split()[0])
+print(total)
