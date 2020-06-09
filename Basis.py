@@ -2,23 +2,31 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
-response = requests.get("https://www.gumtree.com.au/s-search.html")
+def getTotalResultsFound(url):
+    response = requests.get(url)
 
-if response:
-    print("Response OK")
-else:
-    print("Response Failed")
+    if response:
+        print("Response OK")
+    else:
+        print("Response Failed")
 
-print(response.status_code)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    results_list = soup.find(class_='breadcrumbs__summary--enhanced')
 
-content = response.content
-soup = BeautifulSoup(response.text, 'html.parser')
+    result = results_list.get_text()
 
-results_list = soup.find(class_='breadcrumbs__summary--enhanced')
+    # Getting the int value of result
+    total = int(result.split()[0])
 
-result = results_list.get_text()
-print(result)
+    return result
 
-# Getting the int value of result
-total = int(result.split()[0])
-print(total)
+def extractTotalIntValue(result):
+    total = int(result.split()[0])
+    return total
+
+if __name__ == "__main__":
+    result = getTotalResultsFound("https://www.gumtree.com.au/s-act/l3008838")
+    total = extractTotalIntValue(result)
+
+    print(result)
+    print(total)
