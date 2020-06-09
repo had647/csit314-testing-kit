@@ -1,5 +1,5 @@
 # Does the total listing of Australia match the total sum of all states' listings?
-from DantestingResultsFoundByLocation import *
+from testingResultsFoundByLocation import *
 
 australia = getTotalResultsFound("https://www.gumtree.com.au/s-search.html")
 totalAus = extractTotalIntValue(australia)
