@@ -1,4 +1,5 @@
 from lw803_files.test_oracle_appropriateCategory import testCategoryAppropriateness
+from lw803_files.test_oracle_categoryNumbers import testCategoryNumber
 from lw803_files.test_oracle_priceFilter import *
 
 ##### Test Price Filters with keywords #####
@@ -16,7 +17,12 @@ from lw803_files.test_oracle_priceFilter import *
 # testCategoryAppropriateness("ugg boots", "jobs", "c9302")
 # testCategoryAppropriateness("ugg boots", "real-estate", "c9296")
 # testCategoryAppropriateness("ugg boots", "books-music-games", "c18393")
-# testCategoryAppropriateness("ugg boots", "clothing-jewellery", "c18308")
+# testCategoryAppropriateness("ugg boots",  "clothing-jewellery", "c18308")
+
+#### Test Category numbers  ####
+
+# testCategoryNumber()
+
 
 
 
