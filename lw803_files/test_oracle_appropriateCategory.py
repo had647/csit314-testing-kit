@@ -1,10 +1,8 @@
 from lw803_files.appropriateCategory import *
-import re
 
 def testCategoryAppropriateness(randomKeyword, randomCategory):
 
     keyword = randomKeyword
-    keyword.replace(" ", "+")
     category = randomCategory
     general = generalSearch(keyword)
     print("The number of results for keyword " + keyword + " in Australia are: " + str(general))
@@ -20,7 +18,7 @@ def testCategoryAppropriateness(randomKeyword, randomCategory):
               ". However, it should not be found in the category " + category + ". This is not the case.")
 
 def wrongCategorySearch(keyword, category):
-    print(keyword)
+
     url = "https://www.gumtree.com.au/s-" + category + "/" + queryBuilder(keyword) + "/k0c18320"
     underPriceResults = keyword_checker(url)
 
@@ -28,16 +26,23 @@ def wrongCategorySearch(keyword, category):
 
 def generalSearch(keyword):
 
-    url = "https://www.gumtree.com.au/s-" + keyword + "/k0"
+    url = "https://www.gumtree.com.au/s-" + queryBuilder(keyword) + "/k0"
     generalPriceResults = keyword_checker(url)
 
     return generalPriceResults
 
-def queryBuilder(keyword):
+def queryBuilder(keywordToChange):
 
-    string = keyword.split()
-    string2 = string[0] + "+" + string[1]
+    if " " in keywordToChange:
 
-    return string2
+        tempKeyword = keywordToChange.split(" ")
+        updatedKeyword = tempKeyword[0] + "+" + tempKeyword[1]
+
+        return updatedKeyword
+
+    else:
+        return keywordToChange
+
+
 
 
