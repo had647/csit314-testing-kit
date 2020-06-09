@@ -1,14 +1,14 @@
 from lw803_files.priceFilter import *
 
-def testPriceFilters():
+def testPriceFilters(randomKeyword):
 
-    keyword = "boat" # to be random
+    keyword = randomKeyword
     over = overSetPrice(keyword)
-    print("The number of results for " + keyword + "in Australia above $5,000.00 are: " + str(over))
+    print("The number of results for keyword " + keyword + " in Australia above $5,000.00 are: " + str(over))
     under = underSetPrice(keyword)
-    print("The number of results for " + keyword + "in Australia under $5,000.00 are: " + str(under))
+    print("The number of results for keyword " + keyword + " in Australia under $5,000.00 are: " + str(under))
     general = generalSearch(keyword)
-    print("The number of results for " + keyword + "in Australia: " + str(general))
+    print("The number of results for keyword " + keyword + " in Australia: " + str(general))
 
     if over + under == general:
         print("The estimated result did equate to the true result.")
