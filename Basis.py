@@ -14,10 +14,6 @@ def getTotalResultsFound(url):
     results_list = soup.find(class_='breadcrumbs__summary--enhanced')
 
     result = results_list.get_text()
-
-    # Getting the int value of result
-    total = int(result.split()[0])
-
     return result
 
 def extractTotalIntValue(result):
