@@ -53,9 +53,9 @@ def main():
     totalWA = extractTotalIntValue(wa)
 
     if calculateTotal(totalACT, totalNSW, totalNT, totalQLD, totalSA, totalTAS, totalVIC, totalWA) == totalAus:
-        print("The Test Passed!")
+        print("\nThe Test Passed!")
     else:
-        print("The Test Failed!")
+        print("\nThe Test Failed!")
         print("The Sum of each state: " , calculateTotal(totalACT, totalNSW, totalNT, totalQLD, totalSA, totalTAS, totalVIC, totalWA))
         print("The total Gumtree provided: ", totalAus)
 
