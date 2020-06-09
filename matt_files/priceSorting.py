@@ -5,14 +5,9 @@ from bs4 import BeautifulSoup, SoupStrainer
 
 
 # https://www.gumtree.com.au/s-keyword/k0?sort=price_asc
-def generate_list(keyword, page):
-    url = "https://www.gumtree.com.au/s-" + keyword + "/page-" + str(page) + "/k0?sort=price_asc"
+def generate_list(keyword, page, direction):
+    url = "https://www.gumtree.com.au/s-" + keyword + "/page-" + str(page) + "/k0?sort=price_" + direction
     response = requests.get(url)
-
-    if response:
-        print("Response OK")
-    else:
-        print("Response Failed")
 
     no_top_ads = SoupStrainer(
         class_="panel search-results-page__main-ads-wrapper user-ad-collection user-ad-collection--row")
@@ -27,6 +22,6 @@ def generate_list(keyword, page):
 
 
 if __name__ == "__main__":
-    res = generate_list("black+car", 4)
-    res += generate_list("black+car", 5)
+    res = generate_list("black+car", 4, "asc")
+    res += generate_list("black+car", 5, "asc")
     print(res)
