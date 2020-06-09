@@ -26,20 +26,23 @@ def wrongCategorySearch(keyword, category):
 
 def generalSearch(keyword):
 
-    url = "https://www.gumtree.com.au/s-" + keyword + "/k0"
+    url = "https://www.gumtree.com.au/s-" + queryBuilder(keyword) + "/k0"
     generalPriceResults = keyword_checker(url)
 
     return generalPriceResults
 
-def queryBuilder(keyword):
+def queryBuilder(keywordToChange):
 
-    print(keyword)
-    if keyword.isspace():
+    if " " in keywordToChange:
 
-        keyword.replace(" ", "+")
-        print(keyword)
-        return keyword
+        tempKeyword = keywordToChange.split(" ")
+        updatedKeyword = tempKeyword[0] + "+" + tempKeyword[1]
+
+        return updatedKeyword
 
     else:
-        return keyword
+        return keywordToChange
+
+
+
 
