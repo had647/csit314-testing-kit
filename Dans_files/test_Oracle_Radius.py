@@ -9,7 +9,7 @@ import random
 # Run 5 different tests with new random parameters each time.
 for i in range(5):
     radius_1 = random.randint(1,250)
-    radius_2 = random.randint(1,250)
+    radius_2 = radius_1 + 1
 
     radius1 = getTotalResultsFound("https://www.gumtree.com.au/s-wollongong-wollongong/l3004860r" + str(radius_1))
     radius1Total = extractTotalIntValue(radius1)
