@@ -53,10 +53,11 @@ def main():
     totalWA = extractTotalIntValue(wa)
 
     if calculateTotal(totalACT, totalNSW, totalNT, totalQLD, totalSA, totalTAS, totalVIC, totalWA) == totalAus:
-        print("The results are equal")
+        print("\nThe Test Passed!")
     else:
-        print("Gumtree did a whoopsie")
-
+        print("\nThe Test Failed!")
+        print("The Sum of each state: " , calculateTotal(totalACT, totalNSW, totalNT, totalQLD, totalSA, totalTAS, totalVIC, totalWA))
+        print("The total Gumtree provided: ", totalAus)
 
 if __name__== "__main__":
     main()
