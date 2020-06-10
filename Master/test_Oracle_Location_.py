@@ -3,7 +3,7 @@ from Master.collectRequiredResults import *
 from Master.outputCSV import *
 
 def run_test_location():
-    print("Running Location Test Oracle now...")
+    print("\nRunning Location Test Oracle now...")
 
     australia = getTotalResultsFound("https://www.gumtree.com.au/s-search.html")
     totalAus = extractTotalIntValue(australia)

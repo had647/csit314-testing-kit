@@ -13,7 +13,6 @@ def runAutomatedTest():
     run_test_offerType()
     run_AppropriateCategory()
 
-
 if __name__ == "__main__":
     runAutomatedTest()
 
