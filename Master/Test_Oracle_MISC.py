@@ -22,7 +22,7 @@ def misc_search_test():
         wantedResult = extractTotalIntValue(wanted)
 
         totalOffer = calculateTotalOFFER(offeringResult, wantedResult)
-        if  totalOffer == total :
+        if  totalOffer == totalResults :
             print("\nOFFERING in MISCELLANEOUS TEST")
             print("The Test Passed!")
             print("The Sum of each price type: ",
