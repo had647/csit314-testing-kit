@@ -1,8 +1,10 @@
 from Master.collectRequiredResults import generate_list
 from Master.outputCSV import *
 
-def testFreeListings(keyword):
+def run_test_freeListing():
+    print("\nRunning Free Listing Test Oracle now...")
 
+    keyword = "black+car"
     data = generate_list(keyword)
 
     testCase = "Results displayed for free marked searches compared to their actual price listing"
@@ -17,5 +19,3 @@ def testFreeListings(keyword):
     else:
         print("All listings are free")
         outputCSV(testCase, True, "Free", "Free")
-
-testFreeListings("black+car")
