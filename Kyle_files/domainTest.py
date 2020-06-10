@@ -5,7 +5,7 @@ from Kyle_files.outputCSV import *
 def runAutomatedTest():
     setupCSVHeaders()
     # All test oracles go here
-    real_estate_test()
+    real_estate_search_test()
     misc_search_test()
 
 

@@ -2,6 +2,7 @@
 This oracle will compare the total of test result equals the original result
 """
 from Kyle_files.MiscGoodsTest import *
+from Kyle_files.outputCSV import *
 
 def misc_search_test():
 
@@ -13,22 +14,27 @@ def misc_search_test():
 
         # ------ OFFERING of MISCELLANEOUS  ------- #
 
+        testCase = "Results displayed in Miscellaneous Goods in Australia and comparation between its offering plus wanted and the total in Australia"
+
         offering = getTotalResultsFound(url+"?ad=offering")
         wanted = getTotalResultsFound(url+"?ad=wanted")
 
-        if calculateTotalOFFER(offering, wanted) == total :
+        totalOffer = calculateTotalOFFER(offering, wanted)
+        if  totalOffer == total :
             print("\nOFFERING in MISCELLANEOUS TEST")
             print("The Test Passed!")
             print("The Sum of each price type: ",
-                  calculateTotalOFFER(offering, wanted))
+                  totalOffer)
             print("The total Gumtree provided: ", total)
+            outputCSV(testCase, True, totalResults, totalOffer)
 
         else:
             print("\nSub Categories in MISCELLANEOUS TEST")
             print("The Test Failed!")
             print("The Sum of each price type: ",
-                  calculateTotalOFFER(offering, wanted))
+                  totalOffer)
             print("The total Gumtree provided: ", total)
+            outputCSV(testCase, True, totalResults, totalOffer)
 
         # ------ END OF OFFERING OF MISCELLANEOUS ------ #
 
