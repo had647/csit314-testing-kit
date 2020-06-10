@@ -1,3 +1,4 @@
+from Master.outputCSV import outputCSV
 from lw803_files.result_getter import price_grabber
 
 
@@ -11,12 +12,18 @@ def testPriceFilters():
     general = generalSearch()
     print("The number of results for in Australia: " + str(general))
 
+    priceFilter_testCase = "Results displayed from all Australia vs the sum of all results >= $5k and <= $5k"
+    total_prices = over + under
+
     if over + under == general:
         print("The estimated result did equate to the true result.")
+        outputCSV(priceFilter_testCase, True, general, total_prices)
 
     elif over + under != general:
         total = general - (under + over)
-        print("The estimated result did not equate to the true result. The difference between queries is: " + str(total))
+        print("The estimated result did not equate to the true result. The difference between queries is: "
+              + str(total))
+        outputCSV(priceFilter_testCase, True, general, total_prices)
 
 # def testPriceFilters(randomKeyword):
 #

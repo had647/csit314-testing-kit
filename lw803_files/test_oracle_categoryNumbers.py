@@ -1,3 +1,4 @@
+from Master.outputCSV import outputCSV
 from lw803_files.result_getter import keyword_checker, category_counter
 
 
@@ -8,12 +9,17 @@ def testCategoryNumber():
     category = categorySearch()
     print("The number of results of all categories combined in Australia are: " + str(category))
 
+    category_testCase = "Results displayed from all Australia vs the sum of all category listings"
+
     if category == general:
         print("The search query is acting as expected.")
+        outputCSV(category_testCase, True, general, category)
 
     elif category != general:
         total = general - category
-        print("The estimated result did not equate to the true result. The difference between queries is: " + str(total))
+        print("The estimated result did not equate to the true result. The difference between queries is: "
+              + str(total))
+        outputCSV(category_testCase, True, general, category)
 
 def categorySearch():
 

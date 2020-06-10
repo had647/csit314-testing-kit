@@ -1,4 +1,4 @@
-from Dans_files.outputCSV import outputCSV
+from Master.outputCSV import outputCSV
 from lw803_files.result_getter import keyword_checker
 
 def run_AppropriateCategory():
@@ -27,11 +27,12 @@ def run_AppropriateCategory():
 
         if wrong == 0:
             print("The search query is acting as expected.")
-            outputCSV(category_testcase, True, general, wrong)
+            outputCSV(category_testcase, True, 0, wrong)
 
         elif wrong > 0:
             print("The number of results for " + keyword + " are " + str(general) +
                   ". However, it should not be found in the category " + category + ". This is not the case.")
+            outputCSV(category_testcase, False, 0, wrong)
 
     def wrongCategorySearch(keyword, category,catCode):
 
