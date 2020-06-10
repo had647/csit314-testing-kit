@@ -19,4 +19,3 @@ def runAutomatedTest():
 
 if __name__ == "__main__":
     runAutomatedTest()
-

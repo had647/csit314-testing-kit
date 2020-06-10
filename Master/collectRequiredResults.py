@@ -1,6 +1,6 @@
 import requests
 import json
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, SoupStrainer
 
 def getTotalResultsFound(url):
     response = requests.get(url)
@@ -68,3 +68,18 @@ def category_counter(url):
     final_result = int(result_num[0])
 
     return final_result
+
+# free listings
+def generate_list(keyword):
+    url = "https://www.gumtree.com.au/s-" + keyword + "/k0?price-type=free"
+    response = requests.get(url)
+
+    no_top_ads = SoupStrainer(
+        class_="panel search-results-page__main-ads-wrapper user-ad-collection user-ad-collection--row")
+    soup = BeautifulSoup(response.text, 'html.parser', parse_only=no_top_ads)
+    results_list = soup.find_all(class_="user-ad-price__no-amount-text")
+
+    results = []
+    for result in results_list:
+        results.append(result.get_text())
+    return results
