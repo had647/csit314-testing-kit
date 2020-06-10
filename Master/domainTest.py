@@ -14,7 +14,7 @@ from Master.test_Oracle_AppropriateCategory import *
 from Master.test_Oracle_PremiumOfferTypes import *
 from Master.outputCSV import *
 
-# Here we can setup the headers once, then call all of our tests. Each test should handle the CSV ouput in its function.
+# Here we can setup the headers once, then call all of our tests. Each test should handle the CSV output in its function.
 def runAutomatedTest():
     setupCSVHeaders()
     # All test oracles go here
@@ -30,7 +30,7 @@ def runAutomatedTest():
     run_misc_search_test()
     run_clothing_jewellery_search_test()
     run_test_keywordSearch()
-    run_test_premiumOfferType() #Denver unchecked
+    run_test_premiumOfferType()
 
 if __name__ == "__main__":
     runAutomatedTest()
