@@ -1,7 +1,8 @@
-from Dans_files.outputCSV import outputCSV
-from lw803_files.result_getter import keyword_checker
+from Master.collectRequiredResults import *
+from Master.outputCSV import *
 
 def run_AppropriateCategory():
+    print("Running Appropriate Category Test Oracle now...")
     def testCategoryAppropriateness():
 
         categoryAppropriateness("ugg boots", "cars-vans-utes", "c18320")
@@ -23,7 +24,7 @@ def run_AppropriateCategory():
         print("The number of results for keyword " + keyword + " in category " + category +
               " in Australia are: " + str(wrong))
 
-        category_testcase = "Results displayed for " + keyword + " in all categories vs results displayed for " + keyword + " in " + category + "."
+        category_testcase = "Results displayed for " + keyword + " in all categories vs results displayed for " + keyword + " in " + category
 
         if wrong == 0:
             print("The search query is acting as expected.")
@@ -58,7 +59,6 @@ def run_AppropriateCategory():
 
         else:
             return keywordToChange
-
 
 
 
