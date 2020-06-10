@@ -7,7 +7,7 @@ def run_test_freeListing():
     keyword = "black+car"
     data = generate_list(keyword)
 
-    testCase = "Results displayed for free marked searches compared to their actual price listing"
+    testCase = "Results displayed for refined free searches compared to their actual price listing"
     not_free_flag = False
     for price in data:
         if price != "Free":
