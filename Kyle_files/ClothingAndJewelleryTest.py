@@ -24,7 +24,7 @@ def calculateTotalCategories(women, jewellery, womenShoes, men, bags, menShoes, 
 
 
 def extractTotalIntValue(result):
-    total = int(result[0].split(" ")[0])
+    total = int(result.split()[0])
     return total
 
 

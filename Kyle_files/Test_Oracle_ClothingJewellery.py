@@ -15,24 +15,30 @@ def clothing_jewellery_search_test():
         # ------ Categories of Clothing & Jewellery  ------- #
 
         women = getTotalResultsFound("https://www.gumtree.com.au/s-women-s-clothing/c18570")
+        womenResult = extractTotalIntValue(women)
         jewellery = getTotalResultsFound("https://www.gumtree.com.au/s-jewellery/c18601")
+        jewelleryResult = extractTotalIntValue(jewellery)
         womenShoes = getTotalResultsFound("https://www.gumtree.com.au/s-women-s-shoes/c18572")
+        womenShoesResult = extractTotalIntValue(womenShoes)
         men = getTotalResultsFound("https://www.gumtree.com.au/s-men-s-clothing/c18571")
+        menResult = extractTotalIntValue(men)
         bags = getTotalResultsFound("https://www.gumtree.com.au/s-bags/c18574")
+        bagsResult = extractTotalIntValue(bags)
         menShoes = getTotalResultsFound("https://www.gumtree.com.au/s-men-s-shoes/c18573")
+        menShoesResult = extractTotalIntValue(menShoes)
         dressMaking = getTotalResultsFound("https://www.gumtree.com.au/s-dress-making-alterations/c30013")
+        dressMakingResult = extractTotalIntValue(dressMaking)
 
 
+        testCase = "Results displayed in Clothing And Jewellery in Australia and its sub categories in Australia"
 
-        testCase = "Results displayed in Miscellaneous Goods in Australia and comparation between its offering plus wanted and the total in Australia"
-
-        totalCategories = calculateTotalCategories(women, jewellery, womenShoes, men, bags, menShoes, dressMaking)
+        totalCategories = calculateTotalCategories(womenResult, jewelleryResult, womenShoesResult, menResult, bagsResult, menShoesResult, dressMakingResult)
         if  totalCategories == total :
             print("\nOFFERING in MISCELLANEOUS TEST")
             print("The Test Passed!")
             print("The Sum of each price type: ",
                   totalCategories)
-            print("The total Gumtree provided: ", total)
+            print("The total Gumtree provided: ", totalResults)
             outputCSV(testCase, True, totalResults, totalCategories)
 
         else:
@@ -40,7 +46,7 @@ def clothing_jewellery_search_test():
             print("The Test Failed!")
             print("The Sum of each price type: ",
                   totalCategories)
-            print("The total Gumtree provided: ", total)
-            outputCSV(testCase, True, totalResults, totalCategories)
+            print("The total Gumtree provided: ", totalResults)
+            outputCSV(testCase, False , totalResults, totalCategories)
 
         # ------ END OF Categories OF Clothing & Jewellery ------ #

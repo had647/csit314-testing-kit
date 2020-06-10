@@ -15,35 +15,44 @@ def real_estate_search_test():
         # ------ TYPE of REAL ESTATE  ------- #
 
         flatShare = getTotalResultsFound("https://www.gumtree.com.au/s-flatshare-houseshare/c18294")
-
+        flatShareResult = extractTotalIntValue(flatShare)
         rent = getTotalResultsFound("https://www.gumtree.com.au/s-property-for-rent/c18364")
+        rentResult = extractTotalIntValue(rent)
         saleBusiness = getTotalResultsFound("https://www.gumtree.com.au/s-business-for-sale/c18468")
+        saleBusinessResult = extractTotalIntValue(saleBusiness)
         saleProperty = getTotalResultsFound("https://www.gumtree.com.au/s-property-for-sale/c18367")
+        salePropertyResult = extractTotalIntValue(saleProperty)
         office = getTotalResultsFound("https://www.gumtree.com.au/s-office-space-commercial/c18365")
+        officeResult = extractTotalIntValue(office)
         parking = getTotalResultsFound("https://www.gumtree.com.au/s-parking-storage/c18366")
+        parkingResult = extractTotalIntValue(parking)
         roomshare = getTotalResultsFound("https://www.gumtree.com.au/s-roomshare/c18511")
+        roomshareResult = extractTotalIntValue(roomshare)
         land = getTotalResultsFound("https://www.gumtree.com.au/s-land-for-sale/c20031")
+        landResult = extractTotalIntValue(land)
         reService = getTotalResultsFound("https://www.gumtree.com.au/s-real-estate/c38467")
+        reServiceResult = extractTotalIntValue(reService)
         other = getTotalResultsFound("https://www.gumtree.com.au/s-other-real-estate/c18302")
+        otherResult = extractTotalIntValue(other)
         shortTerm = getTotalResultsFound("https://www.gumtree.com.au/s-short-term/c18295")
-
+        shortTermResult = extractTotalIntValue(shortTerm)
         testCase = "Results displayed for Real Estate in Australia and its categories in Australia"
 
-        totalAllCategories = calculateTotalSubRE(flatShare, rent, saleBusiness, saleProperty, office, parking, roomshare, land, reService, other, shortTerm)
+        totalAllCategories = calculateTotalSubRE(flatShareResult, rentResult, saleBusinessResult, salePropertyResult, officeResult, parkingResult, roomshareResult, landResult, reServiceResult, otherResult, shortTermResult)
         if  totalAllCategories == total :
             print("\nSub Categories in REAL ESTATE TEST")
             print("The Test Passed!")
             print("The Sum of each price type: ",
                   totalAllCategories)
-            print("The total Gumtree provided: ", total)
+            print("The total Gumtree provided: ", totalResults)
             outputCSV(testCase, True, totalResults, totalAllCategories)
         else:
             print("\nSub Categories in REAL ESTATE TEST")
             print("The Test Failed!")
             print("The Sum of each price type: ",
                   totalAllCategories)
-            print("The total Gumtree provided: ", total)
-            outputCSV(testCase, True, totalResults, totalAllCategories)
+            print("The total Gumtree provided: ", totalResults)
+            outputCSV(testCase, False , totalResults, totalAllCategories)
 
         # ------ END OF TYPE OF REAL ESTATE ------ #
 
@@ -67,26 +76,26 @@ def real_estate_search_test():
         priceDropAds = getTotalResultsFound(url+ "?priceDropAds=y")
         priceDropAdsResults = extractTotalIntValue(priceDropAds)
 
-        testCase = "Results display in Real Estate in Australia and its advertisement type in Australia"
+        testCase = "Results displayed in Real Estate in Australia and its advertisement type in Australia"
 
         totalAds = calculateTotalAds(premiumAdsResults, featureAdsResults, topAdsResults, highlightAdsResults, urgentAdsResults, priceDropAdsResults)
             # ------ STARTING ORACLE ADVERTISEMENT TEST ------- #
 
-        if  totalAds == total :
+        if  totalAds == 3393 :
             print("\nAdvertisement in REAL ESTATE TEST")
             print("The Test Passed!")
             print("The Sum of each price type: ",
                   totalAds)
-            print("The total Gumtree provided: ", total)
-            outputCSV(testCase, True, totalResults, totalAds)
+            print("The total Gumtree provided: ", 3393)
+            outputCSV(testCase, True, 3393, totalAds)
 
         else:
             print("\nAdvertisement in REAL ESTATE TEST")
             print("The Test Failed!")
             print("The Sum of each price type: ",
                   totalAds)
-            print("The total Gumtree provided: ", total)
-            outputCSV(testCase, True, totalResults, totalAds)
+            print("The total Gumtree provided: ", 3393)
+            outputCSV(testCase, False  , 3393, totalAds)
 
             # ------ END OF ORACLE ADVERTISEMENT TEST
 
