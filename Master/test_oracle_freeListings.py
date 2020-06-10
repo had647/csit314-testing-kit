@@ -1,4 +1,4 @@
-from Master.collectRequiredResults import generate_list
+from Master.collectRequiredResults import *
 from Master.outputCSV import *
 
 def run_test_freeListing():
@@ -19,3 +19,5 @@ def run_test_freeListing():
     else:
         print("All listings are free")
         outputCSV(testCase, True, "Free", "Free")
+
+run_test_freeListing()
