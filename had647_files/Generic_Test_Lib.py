@@ -4,7 +4,7 @@ from requests.exceptions import HTTPError
 import requests
 from bs4 import BeautifulSoup
 
-def requestWebpage(url):
+def getTotalResultsFound(url):
     response = None
     try:
         response = requests.get(url)
