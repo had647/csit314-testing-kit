@@ -3,16 +3,28 @@ import json
 from bs4 import BeautifulSoup, SoupStrainer
 
 def getTotalResultsFound(url):
-    response = requests.get(url)
-
+    response = None
+    try:
+        response = requests.get(url)
+    except ConnectionError as ConnErr:
+        print("Encountered an error while trying to retrieve webpage from the following URL: \n" + url)
+        print("\n\nERROR: No response from host")
+    except Exception as Excp:
+        print("Encountered an error while trying to retrieve webpage from the following URL: \n" + url)
+        print("\n\nERROR: Unknown Exception")
+    except BaseException as BaseExcp:
+        print("Encountered an error while trying to retrieve webpage from the following URL: \n" + url)
+        print("\n\nERROR: Unknown BaseException")
     if response:
-        print("Response OK")
+        print("\n\n==================\n*Response Success*\n==================")
+        print("URL: " + url)
+        print("Response Code: " + str(response.status_code))
     else:
-        print("Response Failed")
-
+        print("\n\n=================\n*Response Failed*\n=================")
+        print("URL: " + url)
+        print("Response Code: " + response.status_code)
     soup = BeautifulSoup(response.text, 'html.parser')
     results_list = soup.find(class_='breadcrumbs__summary--enhanced')
-
     result = results_list.get_text()
     return result
 
