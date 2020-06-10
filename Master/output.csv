@@ -1,0 +1,22 @@
+Test Case,Passed,Expected Result,Actual Result
+Results displayed from all Australia vs the sum of all states,False,2806401,2806063
+Results Displayed when radius of location is altered with radius being 180 and 185,True,>= 801426,808039
+Results Displayed when radius of location is altered with radius being 146 and 151,True,>= 691485,697925
+Results Displayed when radius of location is altered with radius being 236 and 241,True,>= 821652,823782
+Results Displayed when radius of location is altered with radius being 224 and 229,True,>= 819975,820648
+Results Displayed when radius of location is altered with radius being 44 and 49,True,>= 64435,86650
+Results Displayed when OfferType of query is altered. Location is set to Griffith,True,685,685
+Results Displayed when OfferType of query is altered. Location is set to Sydney,True,614168,614168
+Results displayed for ugg boots in all categories vs results displayed for ugg boots in cars-vans-utes,True,0,0
+Results displayed for ugg boots in all categories vs results displayed for ugg boots in home-garden,False,0,63
+Results displayed for ugg boots in all categories vs results displayed for ugg boots in jobs,True,0,0
+Results displayed for ugg boots in all categories vs results displayed for ugg boots in real-estate,True,0,0
+Results displayed for ugg boots in all categories vs results displayed for ugg boots in books-music-games,True,0,0
+Results displayed from all Australia vs the sum of all category listings,True,2806439,2438446
+Results displayed from all Australia vs the sum of all results >= $5k and <= $5k,False,2806435,2589853
+Results displayed for free marked searches compared to their actual price listing,True,Free,Free
+Results Displayed when PriceType of query is altered.,False,2806440,2806442
+Results displayed for Real Estate in Australia and its categories in Australia,False,32271,32270
+Results displayed in Real Estate in Australia and its advertisement type in Australia,True,3398,3398
+Results displayed in Miscellaneous Goods in Australia and comparation between its offering plus wanted and the total in Australia,False,150160,150161
+Results displayed in Clothing And Jewellery in Australia and its sub categories in Australia,False,368465,333531

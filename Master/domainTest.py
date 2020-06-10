@@ -20,7 +20,9 @@ def runAutomatedTest():
     run_test_PriceFilters()
     run_test_freeListing()
     run_test_priceType()
-
+    real_estate_search_test()
+    misc_search_test()
+    clothing_jewellery_search_test()
 
 if __name__ == "__main__":
     runAutomatedTest()
