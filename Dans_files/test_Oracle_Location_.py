@@ -2,49 +2,50 @@
 from Dans_files.collectRequiredResults import *
 from Dans_files.outputCSV import *
 
-australia = getTotalResultsFound("https://www.gumtree.com.au/s-search.html")
-totalAus = extractTotalIntValue(australia)
+def run_test_location():
+    print("Running Location Test Oracle now...")
 
-act = getTotalResultsFound("https://www.gumtree.com.au/s-act/l3008838")
-totalACT = extractTotalIntValue(act)
+    australia = getTotalResultsFound("https://www.gumtree.com.au/s-search.html")
+    totalAus = extractTotalIntValue(australia)
 
-nsw = getTotalResultsFound("https://www.gumtree.com.au/s-nsw/l3008839")
-totalNSW = extractTotalIntValue(nsw)
+    act = getTotalResultsFound("https://www.gumtree.com.au/s-act/l3008838")
+    totalACT = extractTotalIntValue(act)
 
-nt = getTotalResultsFound("https://www.gumtree.com.au/s-nt/l3008840")
-totalNT = extractTotalIntValue(nt)
+    nsw = getTotalResultsFound("https://www.gumtree.com.au/s-nsw/l3008839")
+    totalNSW = extractTotalIntValue(nsw)
 
-qld = getTotalResultsFound("https://www.gumtree.com.au/s-qld/l3008841")
-totalQLD = extractTotalIntValue(qld)
+    nt = getTotalResultsFound("https://www.gumtree.com.au/s-nt/l3008840")
+    totalNT = extractTotalIntValue(nt)
 
-sa = getTotalResultsFound("https://www.gumtree.com.au/s-sa/l3008842")
-totalSA = extractTotalIntValue(sa)
+    qld = getTotalResultsFound("https://www.gumtree.com.au/s-qld/l3008841")
+    totalQLD = extractTotalIntValue(qld)
 
-tas = getTotalResultsFound("https://www.gumtree.com.au/s-tas/l3008843")
-totalTAS = extractTotalIntValue(tas)
+    sa = getTotalResultsFound("https://www.gumtree.com.au/s-sa/l3008842")
+    totalSA = extractTotalIntValue(sa)
 
-vic = getTotalResultsFound("https://www.gumtree.com.au/s-vic/l3008844")
-totalVIC = extractTotalIntValue(vic)
+    tas = getTotalResultsFound("https://www.gumtree.com.au/s-tas/l3008843")
+    totalTAS = extractTotalIntValue(tas)
 
-wa = getTotalResultsFound("https://www.gumtree.com.au/s-wa/l3008845")
-totalWA = extractTotalIntValue(wa)
+    vic = getTotalResultsFound("https://www.gumtree.com.au/s-vic/l3008844")
+    totalVIC = extractTotalIntValue(vic)
 
-# Preparing variables for output
-totalAllStates = calculateTotalStates(totalACT, totalNSW, totalNT, totalQLD, totalSA, totalTAS, totalVIC, totalWA)
-testCase = "Results displayed from all Australia vs the sum of all states"
-failed = True
+    wa = getTotalResultsFound("https://www.gumtree.com.au/s-wa/l3008845")
+    totalWA = extractTotalIntValue(wa)
 
-if totalAllStates == totalAus:
-    failed = False
-    print("\nThe Test Passed!")
-    print("The Sum of each state: ",
-          totalAllStates)
-    print("The total Gumtree provided: ", totalAus)
-    outputCSV(testCase, failed, totalAus, totalAllStates)
-else:
-    print("\nThe Test Failed!")
-    print("The Sum of each state: ",
-          totalAllStates)
-    print("The total Gumtree provided: ", totalAus)
-    outputCSV(testCase, failed, totalAus, totalAllStates)
+    # Preparing variables for output
+    totalAllStates = calculateTotalStates(totalACT, totalNSW, totalNT, totalQLD, totalSA, totalTAS, totalVIC, totalWA)
+    testCase = "Results displayed from all Australia vs the sum of all states"
+
+    if totalAllStates == totalAus:
+        print("\nThe Test Passed!")
+        print("The Sum of each state: ",
+              totalAllStates)
+        print("The total Gumtree provided: ", totalAus)
+        outputCSV(testCase, True, totalAus, totalAllStates)
+    else:
+        print("\nThe Test Failed!")
+        print("The Sum of each state: ",
+              totalAllStates)
+        print("The total Gumtree provided: ", totalAus)
+        outputCSV(testCase, False, totalAus, totalAllStates)
 
