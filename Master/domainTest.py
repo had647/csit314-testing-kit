@@ -10,6 +10,8 @@ from Master.Test_Oracle_ClothingJewellery import *
 from Master.Test_Oracle_MISC import *
 from Master.Test_Oracle_RealEstate import *
 from Master.test_Oracle_SearchKeywords import *
+from Master.test_Oracle_AppropriateCategory import *
+from Master.test_Oracle_PremiumOfferTypes import *
 from Master.outputCSV import *
 
 # Here we can setup the headers once, then call all of our tests. Each test should handle the CSV ouput in its function.
@@ -28,6 +30,7 @@ def runAutomatedTest():
     run_misc_search_test()
     run_clothing_jewellery_search_test()
     run_test_keywordSearch()
+    run_test_premiumOfferType() #Denver unchecked
 
 if __name__ == "__main__":
     runAutomatedTest()
