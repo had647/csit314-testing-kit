@@ -4,7 +4,7 @@ This oracle will compare the total of test result equals the original result
 from Master.collectRequiredResults import *
 from Master.outputCSV import *
 
-def clothing_jewellery_search_test():
+def run_clothing_jewellery_search_test():
         print("\nRunning Clothing and Jewellery Test Oracle now...")
         keyword = "clothing-jewellery"
         url = "https://www.gumtree.com.au/s-" + keyword + "/c18308"

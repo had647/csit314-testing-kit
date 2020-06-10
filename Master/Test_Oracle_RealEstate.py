@@ -4,7 +4,7 @@ This oracle will compare the total of test result equals the original result
 from Master.collectRequiredResults import *
 from Master.outputCSV import *
 
-def real_estate_search_test():
+def run_real_estate_search_test():
         print("\nRunning Subcategories Real Estate Test Oracle now...")
 
         keyword = "real-estate"
