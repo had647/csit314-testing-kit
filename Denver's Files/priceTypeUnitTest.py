@@ -15,7 +15,7 @@ class Test(TestCase):
         # Testing that the total is only the Int value from the string
         self.assertEqual(total, 2788336)
 
-    def test_calculateTotal(self):
+    def test_calculateTotalPriceTypes(self):
         fixed = 101
         negotiable = 305
         free = 617

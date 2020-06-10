@@ -83,3 +83,8 @@ def generate_list(keyword):
     for result in results_list:
         results.append(result.get_text())
     return results
+
+#### Generalised method as theory ####
+def calculateTotalPriceTypes(fixed, negotiable, free, swapTrade, driveAway):
+  totalFromPriceTags = fixed + negotiable + free + swapTrade + driveAway
+  return totalFromPriceTags
