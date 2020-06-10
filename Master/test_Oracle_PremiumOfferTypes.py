@@ -5,7 +5,7 @@ from Master.collectRequiredResults import *
 from Master.outputCSV import *
 
 def run_test_premiumOfferType():
-    print("\nRunning PriceType Test Oracle now...")
+    print("\nRunning Premium Offer Type Test Oracle now...")
 
     premium = getTotalResultsFound("https://www.gumtree.com.au/s-ads?premiumAds=y")
     totalPremium = extractTotalIntValue(premium)
