@@ -10,7 +10,7 @@ def getTotalResultsFound(url):
         print("Real Estate Gumtree URL Response OK")
 
     else:
-        print("Response Failed")
+        print("Real Estate Gumtree URL Response Failed")
 
     soup = BeautifulSoup(response.text, 'html.parser')
     results_list = soup.find(class_='breadcrumbs__summary--enhanced')
