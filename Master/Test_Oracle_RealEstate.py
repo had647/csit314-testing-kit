@@ -40,7 +40,7 @@ def run_real_estate_search_test():
         testCase = "Results displayed for Real Estate in Australia and its categories in Australia"
 
         totalAllCategories = calculateTotalSubRE(flatShareResult, rentResult, saleBusinessResult, salePropertyResult, officeResult, parkingResult, roomshareResult, landResult, reServiceResult, otherResult, shortTermResult)
-        if  totalAllCategories == total :
+        if  totalAllCategories == totalResults :
             print("\nSub Categories in REAL ESTATE TEST")
             print("The Test Passed!")
             print("The Sum of each price type: ",

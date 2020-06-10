@@ -33,7 +33,7 @@ def run_clothing_jewellery_search_test():
         testCase = "Results displayed in Clothing And Jewellery in Australia and its sub categories in Australia"
 
         totalCategories = calculateTotalCategories(womenResult, jewelleryResult, womenShoesResult, menResult, bagsResult, menShoesResult, dressMakingResult)
-        if  totalCategories == total :
+        if  totalCategories == totalResults :
             print("\nTest of Sub Categories of Clothing Jewellery")
             print("The Test Passed!")
             print("The Sum of each price type: ",
