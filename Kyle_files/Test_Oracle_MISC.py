@@ -36,6 +36,6 @@ def misc_search_test():
             print("The Sum of each price type: ",
                   totalOffer)
             print("The total Gumtree provided: ", totalResults)
-            outputCSV(testCase, False , totalResults, totalOffer)
+            outputCSV(testCase, False, totalResults, totalOffer)
 
         # ------ END OF OFFERING OF MISCELLANEOUS ------ #

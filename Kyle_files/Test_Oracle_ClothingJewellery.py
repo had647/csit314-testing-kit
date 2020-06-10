@@ -34,7 +34,7 @@ def clothing_jewellery_search_test():
 
         totalCategories = calculateTotalCategories(womenResult, jewelleryResult, womenShoesResult, menResult, bagsResult, menShoesResult, dressMakingResult)
         if  totalCategories == total :
-            print("\nOFFERING in MISCELLANEOUS TEST")
+            print("\nTest of Sub Categories of Clothing Jewellery")
             print("The Test Passed!")
             print("The Sum of each price type: ",
                   totalCategories)
@@ -42,11 +42,11 @@ def clothing_jewellery_search_test():
             outputCSV(testCase, True, totalResults, totalCategories)
 
         else:
-            print("\nSub Categories in MISCELLANEOUS TEST")
+            print("\nTest of Sub Categories of Clothing Jewellery")
             print("The Test Failed!")
             print("The Sum of each price type: ",
                   totalCategories)
             print("The total Gumtree provided: ", totalResults)
-            outputCSV(testCase, False , totalResults, totalCategories)
+            outputCSV(testCase, False, totalResults, totalCategories)
 
         # ------ END OF Categories OF Clothing & Jewellery ------ #

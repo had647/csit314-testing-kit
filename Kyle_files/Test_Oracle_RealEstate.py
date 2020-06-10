@@ -52,7 +52,7 @@ def real_estate_search_test():
             print("The Sum of each price type: ",
                   totalAllCategories)
             print("The total Gumtree provided: ", totalResults)
-            outputCSV(testCase, False , totalResults, totalAllCategories)
+            outputCSV(testCase, False, totalResults, totalAllCategories)
 
         # ------ END OF TYPE OF REAL ESTATE ------ #
 
@@ -95,7 +95,7 @@ def real_estate_search_test():
             print("The Sum of each price type: ",
                   totalAds)
             print("The total Gumtree provided: ", 3393)
-            outputCSV(testCase, False  , 3393, totalAds)
+            outputCSV(testCase, False, 3393, totalAds)
 
             # ------ END OF ORACLE ADVERTISEMENT TEST
 
