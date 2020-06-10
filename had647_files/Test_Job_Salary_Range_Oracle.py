@@ -2,15 +2,24 @@
 This file is responsible for testing the 3 salary types with range
 and ensure the correct number of values is returned.
 
-!!! PLEASE RUN Salary_Range_Test_Data_Generator.py TO GET TEST DATA IF YOU HAVEN'T !!!
+data file is generated if not exists!
 """
 from had647_files.Generic_Test_Lib import *
 from had647_files.outputCSV import *
+from had647_files.Salary_Range_Test_Data_Generator import *
+import os.path
 import json
 
 def run_test_salary_range():
     print("Running Test To Check Salary Range Oracle . . .")
-    print("Retrieving list of URLs from the text file . . .")
+    print("Retrieving list of URLs from the text file . . .\n\n")
+    if(not(os.path.exists("Test_Job_Salary_Range_Oracle_URL.txt"))):
+        print("Cannot retrieve data file: Test_Job_Salary_Range_Oracle_URL.txt . . .\n\n")
+        print("Creating data file Test_Job_Salary_Range_Oracle_URL.txt . . .")
+        generateHourlyRateData();
+        generateAnnualSalaryData();
+        extractSalaryRangeDataFile();
+
     file = open("Test_Job_Salary_Range_Oracle_URL.txt", "r")
     urlList = file.read()
     urlListObject = json.loads(urlList)
