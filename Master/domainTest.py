@@ -27,7 +27,7 @@ def runAutomatedTest():
     run_real_estate_search_test()
     run_misc_search_test()
     run_clothing_jewellery_search_test()
-    run_test_keywordSearch()#Denver untested
+    run_test_keywordSearch()
 
 if __name__ == "__main__":
     runAutomatedTest()
