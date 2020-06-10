@@ -1,9 +1,9 @@
 from Master.outputCSV import outputCSV
-from lw803_files.result_getter import keyword_checker, category_counter
+from Master.collectRequiredResults import *
 
 
 def run_test_CategoryNumber():
-
+    print("\nRunning Category Test Oracle now...")
     general = generalSearch()
     print("The number of results for listings in Australia are: " + str(general))
     category = categorySearch()
@@ -19,7 +19,7 @@ def run_test_CategoryNumber():
         total = general - category
         print("The estimated result did not equate to the true result. The difference between queries is: "
               + str(total))
-        outputCSV(category_testCase, True, general, category)
+        outputCSV(category_testCase, False, general, category)
 
 def categorySearch():
 

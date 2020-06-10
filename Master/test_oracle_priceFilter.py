@@ -1,9 +1,9 @@
 from Master.outputCSV import outputCSV
-from lw803_files.result_getter import price_grabber
+from Master.collectRequiredResults import *
 
 
 def run_test_PriceFilters():
-
+    print("\nRunning Price Filter Test Oracle now...")
 
     over = overSetPrice()
     print("The number of results for in Australia above $5,000.00 are: " + str(over))
@@ -23,7 +23,7 @@ def run_test_PriceFilters():
         total = general - (under + over)
         print("The estimated result did not equate to the true result. The difference between queries is: "
               + str(total))
-        outputCSV(priceFilter_testCase, True, general, total_prices)
+        outputCSV(priceFilter_testCase, False, general, total_prices)
 
 # def testPriceFilters(randomKeyword):
 #
