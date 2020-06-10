@@ -7,23 +7,23 @@ from Master.outputCSV import *
 def run_test_priceType():
     print("\nRunning PriceType Test Oracle now...")
 
-totalResults = getTotalResultsFound("https://www.gumtree.com.au/s-search.html")
-total = extractTotalIntValue(totalResults)
+    totalResults = getTotalResultsFound("https://www.gumtree.com.au/s-search.html")
+    total = extractTotalIntValue(totalResults)
 
-fixed = getTotalResultsFound("https://www.gumtree.com.au/s-ads?price-type=fixed")
-totalFixed = extractTotalIntValue(fixed)
+    fixed = getTotalResultsFound("https://www.gumtree.com.au/s-ads?price-type=fixed")
+    totalFixed = extractTotalIntValue(fixed)
 
-negotiable = getTotalResultsFound("https://www.gumtree.com.au/s-ads?price-type=negotiable")
-totalNegotiable = extractTotalIntValue(negotiable)
+    negotiable = getTotalResultsFound("https://www.gumtree.com.au/s-ads?price-type=negotiable")
+    totalNegotiable = extractTotalIntValue(negotiable)
 
-free = getTotalResultsFound("https://www.gumtree.com.au/s-ads?price-type=free")
-totalFree = extractTotalIntValue(free)
+    free = getTotalResultsFound("https://www.gumtree.com.au/s-ads?price-type=free")
+    totalFree = extractTotalIntValue(free)
 
-swapTrade = getTotalResultsFound("https://www.gumtree.com.au/s-ads?price-type=swap-trade")
-totalSwapTrade = extractTotalIntValue(swapTrade)
+    swapTrade = getTotalResultsFound("https://www.gumtree.com.au/s-ads?price-type=swap-trade")
+    totalSwapTrade = extractTotalIntValue(swapTrade)
 
-driveAway = getTotalResultsFound("https://www.gumtree.com.au/s-ads?price-type=driveaway")
-totalDriveAway = extractTotalIntValue(driveAway)
+    driveAway = getTotalResultsFound("https://www.gumtree.com.au/s-ads?price-type=driveaway")
+    totalDriveAway = extractTotalIntValue(driveAway)
 
     # Preparing Variables for output
     testCase = "Results Displayed when PriceType of query is altered."
@@ -35,8 +35,8 @@ totalDriveAway = extractTotalIntValue(driveAway)
         print("The total Gumtree provided: ", total)
         outputCSV(testCase, True, total, calculateTotalPriceTypes(totalFixed, totalNegotiable, totalFree, totalSwapTrade, totalDriveAway))
     else:
-        print("\nThe Test Passed!")
+        print("\nThe Test Failed!")
         print("The Sum of each price type: ",
             calculateTotalPriceTypes(totalFixed, totalNegotiable, totalFree, totalSwapTrade, totalDriveAway))
         print("The total Gumtree provided: ", total)
-        outputCSV(testCase, TruFalsee, total, calculateTotalPriceTypes(totalFixed, totalNegotiable, totalFree, totalSwapTrade, totalDriveAway))
+        outputCSV(testCase, False, total, calculateTotalPriceTypes(totalFixed, totalNegotiable, totalFree, totalSwapTrade, totalDriveAway))
