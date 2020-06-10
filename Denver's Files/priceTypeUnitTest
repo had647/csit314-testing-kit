@@ -22,7 +22,7 @@ class Test(TestCase):
         swapTrade = 2229
         driveAway = 99
         total = fixed + negotiable + free + swapTrade + driveAway
-        self.assertEqual(total, 3377)
+        self.assertEqual(total, 3351)
 
 
 if __name__ == '__main__':
