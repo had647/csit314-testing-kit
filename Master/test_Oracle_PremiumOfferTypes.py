@@ -19,16 +19,16 @@ def run_test_premiumOfferType():
     # Preparing Variables for output
     testCase = "Results displayed when offer type is altered."
 
-    if calculateTotalOFFER(totalOffering, totalWanted) == totalPremium :
-    print("\nThe Test Passed!")
-    print("The Sum of all premium offer types: ",
-          calculateTotalOFFER(totalOffering, totalWanted))
-    print("The total Gumtree provided: ", totalPremium)
-    outputCSV(testCase, True, totalPremium, calculateTotalOFFER(totalOffering, totalWanted))
+    if calculateTotalOFFER(totalOffering, totalWanted) == totalPremium:
+        print("\nThe Test Passed!")
+        print("The Sum of all premium offer types: ",
+              calculateTotalOFFER(totalOffering, totalWanted))
+        print("The total Gumtree provided: ", totalPremium)
+        outputCSV(testCase, True, totalPremium, calculateTotalOFFER(totalOffering, totalWanted))
 
     else :
-    print("\nThe Test Failed!")
-    print("The Sum of all premium offer types: ",
-          calculateTotalOFFER(totalOffering, totalWanted))
-    print("The total premium ads Gumtree provided: ", totalPremium)
-    outputCSV(testCase, False, totalPremium, calculateTotalOFFER(totalOffering, totalWanted))
+        print("\nThe Test Failed!")
+        print("The Sum of all premium offer types: ",
+              calculateTotalOFFER(totalOffering, totalWanted))
+        print("The total premium ads Gumtree provided: ", totalPremium)
+        outputCSV(testCase, False, totalPremium, calculateTotalOFFER(totalOffering, totalWanted))
