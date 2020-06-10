@@ -10,15 +10,15 @@ wanted = getTotalResultsFound("https://www.gumtree.com.au/s-ads?ad=wanted&premiu
 totalWanted = extractTotalIntValue(wanted)
 
 
-if calculateTotal(totalOffering, totalWanted) == totalPremium :
+if calculateTotalOFFER(totalOffering, totalWanted) == totalPremium :
     print("\nThe Test Passed!")
     print("The Sum of all premium offer types: ",
-          calculateTotal(totalOffering, totalWanted))
+          calculateTotalOFFER(totalOffering, totalWanted))
     print("The total Gumtree provided: ", totalPremium)
 
 else:
     print("\nThe Test Failed!")
     print("The Sum of all premium offer types: ",
-          calculateTotal(totalOffering, totalWanted))
+          calculateTotalOFFER(totalOffering, totalWanted))
     print("The total Gumtree provided: ", totalPremium)
 
