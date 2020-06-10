@@ -19,13 +19,13 @@ def getTotalResultsFound(url):
     return result
 
 def calculateTotalOFFER(offering, wanted):
-  totalOfferMISCGOODS = offering, wanted
+  totalOfferMISCGOODS = offering + wanted
   return totalOfferMISCGOODS
 
 
 
 def extractTotalIntValue(result):
-    total = int(result[0].split(" ")[0])
+    total = int(result.split()[0])
     return total
 
 

@@ -17,15 +17,17 @@ def misc_search_test():
         testCase = "Results displayed in Miscellaneous Goods in Australia and comparation between its offering plus wanted and the total in Australia"
 
         offering = getTotalResultsFound(url+"?ad=offering")
+        offeringResult = extractTotalIntValue(offering)
         wanted = getTotalResultsFound(url+"?ad=wanted")
+        wantedResult = extractTotalIntValue(wanted)
 
-        totalOffer = calculateTotalOFFER(offering, wanted)
+        totalOffer = calculateTotalOFFER(offeringResult, wantedResult)
         if  totalOffer == total :
             print("\nOFFERING in MISCELLANEOUS TEST")
             print("The Test Passed!")
             print("The Sum of each price type: ",
                   totalOffer)
-            print("The total Gumtree provided: ", total)
+            print("The total Gumtree provided: ", totalResults)
             outputCSV(testCase, True, totalResults, totalOffer)
 
         else:
@@ -33,7 +35,7 @@ def misc_search_test():
             print("The Test Failed!")
             print("The Sum of each price type: ",
                   totalOffer)
-            print("The total Gumtree provided: ", total)
-            outputCSV(testCase, True, totalResults, totalOffer)
+            print("The total Gumtree provided: ", totalResults)
+            outputCSV(testCase, False , totalResults, totalOffer)
 
         # ------ END OF OFFERING OF MISCELLANEOUS ------ #
