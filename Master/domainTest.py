@@ -5,7 +5,7 @@ from Master.test_Oracle_AppropriateCategory import *
 from Master.test_oracle_categoryNumbers import *
 from Master.test_oracle_priceFilter import *
 from Master.test_oracle_freeListings import *
-from Master.test_Oracle_PriceType import * #Denver untested
+from Master.test_Oracle_PriceType import *
 from Master.outputCSV import *
 
 # Here we can setup the headers once, then call all of our tests. Each test should handle the CSV ouput in its function.
