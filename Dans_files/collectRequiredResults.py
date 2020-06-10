@@ -20,10 +20,10 @@ def extractTotalIntValue(result):
     total = int(result.split()[0])
     return total
 
-def calculateTotal(act, nsw, nt, qld, sa, tas, vic, wa):
+def calculateTotalStates(act, nsw, nt, qld, sa, tas, vic, wa):
     totalFromAllStates =  act + nsw + nt + qld + sa + tas + vic + wa
     return totalFromAllStates
 
-def calculateTotal(offering, wanted):
+def calculateTotalTypes(offering, wanted):
     totalFromOfferType = offering + wanted
     return totalFromOfferType

@@ -23,25 +23,25 @@ griffOfferingTotal = extractTotalIntValue(griffOffering)
 griffWanted = getTotalResultsFound("https://www.gumtree.com.au/s-griffith-wagga-wagga/l3004629?ad=wanted")
 griffWantedTotal = extractTotalIntValue(griffWanted)
 
-if calculateTotal(griffOfferingTotal, griffWantedTotal) == totalGriff:
+if calculateTotalTypes(griffOfferingTotal, griffWantedTotal) == totalGriff:
     print("\nThe Test Passed!")
     print("The Sum of Offering + Wanted is: ",
-          calculateTotal(griffOfferingTotal, griffWantedTotal))
+          calculateTotalTypes(griffOfferingTotal, griffWantedTotal))
     print("The total Gumtree provided: ", totalGriff)
 else:
     print("\nThe Test Failed!")
     print("The Sum of Offering + Wanted is: ",
-          calculateTotal(griffOfferingTotal, griffWantedTotal))
+          calculateTotalTypes(griffOfferingTotal, griffWantedTotal))
     print("The total Gumtree provided: ", totalGriff)
 
-if calculateTotal(sydOfferingTotal, sydWantedTotal) == totalSydney:
+if calculateTotalTypes(sydOfferingTotal, sydWantedTotal) == totalSydney:
     print("\nThe Test Passed!")
     print("The Sum of Offering + Wanted is: ",
-          calculateTotal(sydOfferingTotal, sydWantedTotal))
+          calculateTotalTypes(sydOfferingTotal, sydWantedTotal))
     print("The total Gumtree provided: ", totalSydney)
 else:
     print("\nThe Test Failed!")
     print("The Sum of Offering + Wanted is: ",
-          calculateTotal(sydOfferingTotal, sydWantedTotal))
+          calculateTotalTypes(sydOfferingTotal, sydWantedTotal))
     print("The total Gumtree provided: ", totalSydney)
 

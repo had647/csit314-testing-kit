@@ -1,5 +1,6 @@
 # Does the total listing of Australia match the total sum of all states' listings?
 from Dans_files.collectRequiredResults import *
+from Dans_files.outputCSV import  *
 
 australia = getTotalResultsFound("https://www.gumtree.com.au/s-search.html")
 totalAus = extractTotalIntValue(australia)
@@ -28,13 +29,22 @@ totalVIC = extractTotalIntValue(vic)
 wa = getTotalResultsFound("https://www.gumtree.com.au/s-wa/l3008845")
 totalWA = extractTotalIntValue(wa)
 
-if calculateTotal(totalACT, totalNSW, totalNT, totalQLD, totalSA, totalTAS, totalVIC, totalWA) == totalAus:
+# Preparing variables for output
+totalAllStates = calculateTotalStates(totalACT, totalNSW, totalNT, totalQLD, totalSA, totalTAS, totalVIC, totalWA)
+testCase = "Results displayed from all Australia vs the sum of all states"
+failed = True
+
+if totalAllStates == totalAus:
+    failed = False
     print("\nThe Test Passed!")
     print("The Sum of each state: ",
-          calculateTotal(totalACT, totalNSW, totalNT, totalQLD, totalSA, totalTAS, totalVIC, totalWA))
+          totalAllStates)
     print("The total Gumtree provided: ", totalAus)
+    outputCSV(testCase, failed, totalAus, totalAllStates)
 else:
     print("\nThe Test Failed!")
     print("The Sum of each state: ",
-          calculateTotal(totalACT, totalNSW, totalNT, totalQLD, totalSA, totalTAS, totalVIC, totalWA))
+          totalAllStates)
     print("The total Gumtree provided: ", totalAus)
+    outputCSV(testCase, failed, totalAus, totalAllStates)
+
