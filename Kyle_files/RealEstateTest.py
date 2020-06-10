@@ -18,10 +18,12 @@ def getTotalResultsFound(url):
     result = results_list.get_text()
     return result
 
+# ---- Calculate total of advertisement type of Real Estate
 def calculateTotalAds(premiumAdsResults, featureAdsResults, topAdsResults, highlightAdsResults, urgentAdsResults, priceDropAdsResults):
   totalAdsRealEstate = premiumAdsResults, featureAdsResults, topAdsResults, highlightAdsResults, urgentAdsResults, priceDropAdsResults
   return totalAdsRealEstate
 
+# ----- Calculate total of sub categories of Real Estate
 def calculateTotalSubRE(flatshare, rent, saleBusiness, saleProperty, office, parking, roomshare, land, reService, other, shortTerm):
     totalAdsRealEstate = flatshare, rent, saleBusiness, saleProperty, office, parking, roomshare, land, reService, other, shortTerm
     return totalAdsRealEstate

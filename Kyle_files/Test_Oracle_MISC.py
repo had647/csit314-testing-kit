@@ -3,35 +3,37 @@ This oracle will compare the total of test result equals the original result
 """
 from Kyle_files.MiscGoodsTest import *
 
-keyword = "miscellaneous-goods"
-url = "https://www.gumtree.com.au/s-" + keyword + "/c18319"
+def misc_search_test():
 
-total = getTotalResultsFound(url)
-totalResults = extractTotalIntValue(total)
+        keyword = "miscellaneous-goods"
+        url = "https://www.gumtree.com.au/s-" + keyword + "/c18319"
 
-# ------ OFFERING of MISCELLANEOUS  ------- #
+        total = getTotalResultsFound(url)
+        totalResults = extractTotalIntValue(total)
 
-offering = getTotalResultsFound(url+"?ad=offering")
-wanted = getTotalResultsFound(url+"?ad=wanted")
+        # ------ OFFERING of MISCELLANEOUS  ------- #
 
-if calculateTotalOFFER(offering, wanted) == total :
-    print("\nOFFERING in MISCELLANEOUS TEST")
-    print("The Test Passed!")
-    print("The Sum of each price type: ",
-          calculateTotalOFFER(offering, wanted))
-    print("The total Gumtree provided: ", total)
+        offering = getTotalResultsFound(url+"?ad=offering")
+        wanted = getTotalResultsFound(url+"?ad=wanted")
 
-else:
-    print("\nSub Categories in MISCELLANEOUS TEST")
-    print("The Test Failed!")
-    print("The Sum of each price type: ",
-          calculateTotalOFFER(offering, wanted))
-    print("The total Gumtree provided: ", total)
+        if calculateTotalOFFER(offering, wanted) == total :
+            print("\nOFFERING in MISCELLANEOUS TEST")
+            print("The Test Passed!")
+            print("The Sum of each price type: ",
+                  calculateTotalOFFER(offering, wanted))
+            print("The total Gumtree provided: ", total)
 
-# ------ END OF OFFERING OF MISCELLANEOUS ------ #
+        else:
+            print("\nSub Categories in MISCELLANEOUS TEST")
+            print("The Test Failed!")
+            print("The Sum of each price type: ",
+                  calculateTotalOFFER(offering, wanted))
+            print("The total Gumtree provided: ", total)
 
-# ------ Advertisement in REAL ESTATE ------ #
+        # ------ END OF OFFERING OF MISCELLANEOUS ------ #
 
-# ------ END OF ORACLE ADVERTISEMENT TEST
+        # ------ Advertisement in REAL ESTATE ------ #
 
-# ------ END of Advertisement in REAL ESTATE -----
+        # ------ END OF ORACLE ADVERTISEMENT TEST
+
+        # ------ END of Advertisement in REAL ESTATE -----
