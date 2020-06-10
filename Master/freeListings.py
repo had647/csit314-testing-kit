@@ -3,7 +3,6 @@ import re
 import json
 from bs4 import BeautifulSoup, SoupStrainer
 
-
 # https://www.gumtree.com.au/s-keyword/k0?price-type=free
 def generate_list(keyword):
     url = "https://www.gumtree.com.au/s-" + keyword + "/k0?price-type=free"
@@ -17,7 +16,6 @@ def generate_list(keyword):
     results = []
     for result in results_list:
         results.append(result.get_text())
-
     return results
 
 

@@ -18,15 +18,15 @@ driveAway = getTotalResultsFound("https://www.gumtree.com.au/s-ads?price-type=dr
 totalDriveAway = extractTotalIntValue(driveAway)
 
 
-if calculateTotal(totalFixed, totalNegotiable, totalFree, totalSwapTrade, totalDriveAway) == total :
+if calculateTotalPriceTypes(totalFixed, totalNegotiable, totalFree, totalSwapTrade, totalDriveAway) == total :
     print("\nThe Test Passed!")
     print("The Sum of each price type: ",
-          calculateTotal(totalFixed, totalNegotiable, totalFree, totalSwapTrade, totalDriveAway))
+          calculateTotalPriceTypes(totalFixed, totalNegotiable, totalFree, totalSwapTrade, totalDriveAway))
     print("The total Gumtree provided: ", total)
 
 else:
     print("\nThe Test Failed!")
     print("The Sum of each price type: ",
-          calculateTotal(totalFixed, totalNegotiable, totalFree, totalSwapTrade, totalDriveAway))
+          calculateTotalPriceTypes(totalFixed, totalNegotiable, totalFree, totalSwapTrade, totalDriveAway))
     print("The total Gumtree provided: ", total)
 
