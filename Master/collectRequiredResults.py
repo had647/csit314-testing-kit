@@ -84,7 +84,8 @@ def generate_list(keyword):
         results.append(result.get_text())
     return results
 
-#### Generalised method as theory ####
+# ------ Price Type Test Functions ------ #
+
 def calculateTotalPriceTypes(fixed, negotiable, free, swapTrade, driveAway):
   totalFromPriceTags = fixed + negotiable + free + swapTrade + driveAway
   return totalFromPriceTags
