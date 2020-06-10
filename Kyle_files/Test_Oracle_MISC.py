@@ -37,9 +37,3 @@ def misc_search_test():
             outputCSV(testCase, True, totalResults, totalOffer)
 
         # ------ END OF OFFERING OF MISCELLANEOUS ------ #
-
-        # ------ Advertisement in REAL ESTATE ------ #
-
-        # ------ END OF ORACLE ADVERTISEMENT TEST
-
-        # ------ END of Advertisement in REAL ESTATE -----
