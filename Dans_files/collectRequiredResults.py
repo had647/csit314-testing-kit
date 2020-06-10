@@ -24,4 +24,6 @@ def calculateTotal(act, nsw, nt, qld, sa, tas, vic, wa):
     totalFromAllStates =  act + nsw + nt + qld + sa + tas + vic + wa
     return totalFromAllStates
 
-
+def calculateTotal(offering, wanted):
+    totalFromOfferType = offering + wanted
+    return totalFromOfferType

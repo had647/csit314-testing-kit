@@ -3,7 +3,7 @@ This test is setting up the functions to return the total results found in the l
 Radius is chosen randomly.
 In theory, as the radius expands, the results found should increase.
 """
-from Dans_files.testingResultsWithinRadius_ import *
+from Dans_files.collectRequiredResults import *
 import random
 
 # Run 5 different tests with new random parameters each time.

@@ -1,5 +1,5 @@
 # Does the total listing of Australia match the total sum of all states' listings?
-from Dans_files.testingResultsFoundByLocation_ import *
+from Dans_files.collectRequiredResults import *
 
 australia = getTotalResultsFound("https://www.gumtree.com.au/s-search.html")
 totalAus = extractTotalIntValue(australia)

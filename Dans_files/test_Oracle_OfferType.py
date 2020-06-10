@@ -1,7 +1,7 @@
 """
 Tests to see if the total results equals the sum of wanted and offering Offer type
 """
-from Dans_files.testingOfferTypeSum import *
+from Dans_files.collectRequiredResults import *
 
 # large data set by location
 sydney = getTotalResultsFound("https://www.gumtree.com.au/s-sydney/l3003435")
