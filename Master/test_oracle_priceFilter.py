@@ -1,7 +1,6 @@
 from Master.outputCSV import outputCSV
 from lw803_files.result_getter import price_grabber
 
-
 def run_test_PriceFilters():
 
 
