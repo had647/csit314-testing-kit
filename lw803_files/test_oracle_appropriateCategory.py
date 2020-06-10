@@ -1,6 +1,19 @@
-from lw803_files.appropriateCategory import *
+from Dans_files.outputCSV import outputCSV
+from lw803_files.result_getter import keyword_checker
 
-def testCategoryAppropriateness(randomKeyword, randomCategory, catCode):
+
+def testCategoryAppropriateness():
+
+    categoryAppropriateness("ugg boots", "cars-vans-utes", "c18320")
+    categoryAppropriateness("ugg boots", "home-garden", "c18397")
+    categoryAppropriateness("ugg boots", "jobs", "c9302")
+    categoryAppropriateness("ugg boots", "real-estate", "c9296")
+    categoryAppropriateness("ugg boots", "books-music-games", "c18393")
+    categoryAppropriateness("ugg boots",  "clothing-jewellery", "c18308")
+
+def categoryAppropriateness(randomKeyword, randomCategory, catCode):
+
+
 
     keyword = randomKeyword
     category = randomCategory
@@ -10,8 +23,11 @@ def testCategoryAppropriateness(randomKeyword, randomCategory, catCode):
     print("The number of results for keyword " + keyword + " in category " + category +
           " in Australia are: " + str(wrong))
 
+    category_testcase = "Results displayed for " + keyword + " in all categories vs results displayed for " + keyword + " in " + category + "."
+
     if wrong == 0:
         print("The search query is acting as expected.")
+        outputCSV(category_testcase, True, general, wrong)
 
     elif wrong > 0:
         print("The number of results for " + keyword + " are " + str(general) +

@@ -1,5 +1,4 @@
-from lw803_files.appropriateCategory import *
-from lw803_files.categoryNumbers import category_counter
+from lw803_files.result_getter import keyword_checker, category_counter
 
 
 def testCategoryNumber():
