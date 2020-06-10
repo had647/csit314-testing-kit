@@ -102,7 +102,7 @@ def calculateTotalSubRE(flatshare, rent, saleBusiness, saleProperty, office, par
     totalAdsRealEstate = flatshare + rent + saleBusiness + saleProperty + office + parking + roomshare +  land + reService + other + shortTerm
     return totalAdsRealEstate
 
-# ------- Miscellaneous Goods Test Functions ------ #
+# ------- Miscellaneous Goods & Featured Ads Offering Type Test Functions ------ #
 def calculateTotalOFFER(offering, wanted):
   totalOfferMISCGOODS = offering + wanted
   return totalOfferMISCGOODS
