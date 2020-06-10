@@ -2,6 +2,8 @@ from Master.outputCSV import outputCSV
 from lw803_files.result_getter import keyword_checker
 
 def run_AppropriateCategory():
+    print("Running Location Test Oracle now...")
+
     def testCategoryAppropriateness():
 
         categoryAppropriateness("ugg boots", "cars-vans-utes", "c18320")
