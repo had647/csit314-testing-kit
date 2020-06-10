@@ -1,7 +1,7 @@
-from Dans_files.test_Oracle_Location_ import *
-from Dans_files.test_Oracle_OfferType import *
-from Dans_files.test_Oracle_Radius import *
-from Dans_files.outputCSV import *
+from Master.test_Oracle_Location_ import *
+from Master.test_Oracle_OfferType import *
+from Master.test_Oracle_Radius import *
+from Master.outputCSV import *
 
 # Here we can setup the headers once, then call all of our tests. Each test should handle the CSV ouput in its function.
 def runAutomatedTest():

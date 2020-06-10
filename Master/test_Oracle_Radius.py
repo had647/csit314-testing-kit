@@ -3,8 +3,8 @@ This test is setting up the functions to return the total results found in the l
 Radius is chosen randomly.
 In theory, as the radius expands, the results found should increase.
 """
-from Dans_files.collectRequiredResults import *
-from Dans_files.outputCSV import *
+from Master.collectRequiredResults import *
+from Master.outputCSV import *
 import random
 
 def run_test_radius():
