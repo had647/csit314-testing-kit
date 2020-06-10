@@ -8,7 +8,6 @@ class MyTestCase(unittest.TestCase):
         # Testing that we can get a response from GumTree
         self.assertTrue(response)
 
-
         soup = BeautifulSoup(response.text, 'html.parser')
         results_list = soup.find(class_='breadcrumbs__summary--enhanced')
         result = results_list.get_text()
@@ -21,7 +20,7 @@ class MyTestCase(unittest.TestCase):
         # Testing that the total is only the Int value from the string
         self.assertEqual(total, 2788336)
 
-    def test_calculateTotal(self):
+    def test_calculateTotalStates(self):
         act = 200
         nsw = 654
         nt = 544
@@ -36,7 +35,7 @@ class MyTestCase(unittest.TestCase):
         # Testing that the sum matches the total
         self.assertEqual(totalFromAllStates, 8642)
 
-    def test_calculateTotal(self):
+    def test_calculateTotalOfferType(self):
         offering = 501
         wanted = 113
         # total = 614
