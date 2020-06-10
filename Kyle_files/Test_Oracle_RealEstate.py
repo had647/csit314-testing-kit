@@ -4,7 +4,7 @@ This oracle will compare the total of test result equals the original result
 from Kyle_files.RealEstateTest import *
 from Kyle_files.outputCSV import *
 
-def real_estate_test():
+def real_estate_search_test():
 
         keyword = "real-estate"
         url = "https://www.gumtree.com.au/s-" + keyword + "/c9296"
@@ -27,7 +27,7 @@ def real_estate_test():
         other = getTotalResultsFound("https://www.gumtree.com.au/s-other-real-estate/c18302")
         shortTerm = getTotalResultsFound("https://www.gumtree.com.au/s-short-term/c18295")
 
-        testCase = "Results displayed from Real Estate in Australia and its categories in Australia"
+        testCase = "Results displayed for Real Estate in Australia and its categories in Australia"
 
         totalAllCategories = calculateTotalSubRE(flatShare, rent, saleBusiness, saleProperty, office, parking, roomshare, land, reService, other, shortTerm)
         if  totalAllCategories == total :
@@ -67,10 +67,10 @@ def real_estate_test():
         priceDropAds = getTotalResultsFound(url+ "?priceDropAds=y")
         priceDropAdsResults = extractTotalIntValue(priceDropAds)
 
-        testCase = "Results displayed from Real Estate in Australia and its advertisement type in Australia"
+        testCase = "Results display in Real Estate in Australia and its advertisement type in Australia"
 
-        totalAds = calculateTotalAds(premiumAds, featureAds, topAds, highlightAds, urgentAds, priceDropAds)
-        # ------ STARTING ORACLE ADVERTISEMENT TEST ------- #
+        totalAds = calculateTotalAds(premiumAdsResults, featureAdsResults, topAdsResults, highlightAdsResults, urgentAdsResults, priceDropAdsResults)
+            # ------ STARTING ORACLE ADVERTISEMENT TEST ------- #
 
         if  totalAds == total :
             print("\nAdvertisement in REAL ESTATE TEST")
@@ -88,6 +88,6 @@ def real_estate_test():
             print("The total Gumtree provided: ", total)
             outputCSV(testCase, True, totalResults, totalAds)
 
-        # ------ END OF ORACLE ADVERTISEMENT TEST
+            # ------ END OF ORACLE ADVERTISEMENT TEST
 
         # ------ END of Advertisement in REAL ESTATE -----
