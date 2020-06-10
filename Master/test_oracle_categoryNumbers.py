@@ -1,8 +1,8 @@
 from Master.outputCSV import outputCSV
 from lw803_files.result_getter import keyword_checker, category_counter
 
-
 def run_test_CategoryNumber():
+    print("\nRunning Category Number Test Oracle now...")
 
     general = generalSearch()
     print("The number of results for listings in Australia are: " + str(general))
@@ -30,8 +30,8 @@ def categorySearch():
     category_code_list = ["c18397", "c18320", "c18308","c18318", "c20045", "c18297", "c18393", "c18319", "c18314",
                           "c9303", "c18433", "c9296", "c9302", "c18420", "c9300", "c18361"]
 
-    list_num = 0;
-    category_num = 0;
+    list_num = 0
+    category_num = 0
 
     for x in category_list:
 
@@ -43,13 +43,10 @@ def categorySearch():
     return category_num
 
 
-
 def generalSearch():
 
     url = "https://www.gumtree.com.au/s-search.html"
     generalPriceResults = keyword_checker(url)
 
     return generalPriceResults
-
-
 
