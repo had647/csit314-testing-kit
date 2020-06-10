@@ -88,3 +88,26 @@ def generate_list(keyword):
 def calculateTotalPriceTypes(fixed, negotiable, free, swapTrade, driveAway):
   totalFromPriceTags = fixed + negotiable + free + swapTrade + driveAway
   return totalFromPriceTags
+
+# ------ Real Estate Test Functions ------ #
+
+
+def calculateTotalAds(premiumAdsResults, featureAdsResults, topAdsResults, highlightAdsResults, urgentAdsResults, priceDropAdsResults):
+  totalAdsRealEstate = premiumAdsResults + featureAdsResults + topAdsResults + highlightAdsResults + urgentAdsResults + priceDropAdsResults
+  return totalAdsRealEstate
+
+
+def calculateTotalSubRE(flatshare, rent, saleBusiness, saleProperty, office, parking, roomshare, land, reService, other, shortTerm):
+    totalAdsRealEstate = flatshare + rent + saleBusiness + saleProperty + office + parking + roomshare +  land + reService + other + shortTerm
+    return totalAdsRealEstate
+
+# ------- Miscellaneous Goods Test Functions ------ #
+def calculateTotalOFFER(offering, wanted):
+  totalOfferMISCGOODS = offering + wanted
+  return totalOfferMISCGOODS
+
+# ------- Clothing And Jewellery Test Functions ------ #
+def calculateTotalCategories(women, jewellery, womenShoes, men, bags, menShoes, dressMaking):
+  totalCategories = women + jewellery + womenShoes + men + bags + menShoes + dressMaking
+  return totalCategories
+

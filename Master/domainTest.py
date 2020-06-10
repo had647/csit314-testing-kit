@@ -6,6 +6,9 @@ from Master.test_oracle_categoryNumbers import *
 from Master.test_oracle_priceFilter import *
 from Master.test_oracle_freeListings import *
 from Master.test_Oracle_PriceType import * #Denver untested
+from Master.Test_Oracle_MISC import *
+from Master.Test_Oracle_RealEstate import *
+from Master.Test_Oracle_ClothingJewellery import *
 from Master.outputCSV import *
 
 # Here we can setup the headers once, then call all of our tests. Each test should handle the CSV ouput in its function.
@@ -20,7 +23,9 @@ def runAutomatedTest():
     run_test_PriceFilters()
     run_test_freeListing()
     run_test_priceType()
-
+    real_estate_search_test()
+    misc_search_test()
+    clothing_jewellery_search_test()
 
 if __name__ == "__main__":
     runAutomatedTest()
