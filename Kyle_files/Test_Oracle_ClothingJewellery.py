@@ -44,9 +44,3 @@ def clothing_jewellery_search_test():
             outputCSV(testCase, True, totalResults, totalCategories)
 
         # ------ END OF Categories OF Clothing & Jewellery ------ #
-
-        # ------ Advertisement in REAL ESTATE ------ #
-
-        # ------ END OF ORACLE ADVERTISEMENT TEST
-
-        # ------ END of Advertisement in REAL ESTATE -----
