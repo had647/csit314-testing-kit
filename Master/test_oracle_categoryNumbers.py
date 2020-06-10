@@ -21,6 +21,8 @@ def run_test_CategoryNumber():
               + str(total))
         outputCSV(category_testCase, False, general, category)
 
+        #yeboi
+
 def categorySearch():
 
     category_list = ["home-garden", "cars-vans-utes", "clothing-jewellery", "baby-children","electronics-computer",
