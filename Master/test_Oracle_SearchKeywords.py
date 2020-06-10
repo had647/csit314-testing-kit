@@ -39,7 +39,7 @@ def run_test_keywordSearch():
             searchThreeTotal)
         print("The toal Gumtree listings: ", total)
 
-        totalString = "<=" + str(total)
+        totalString = "<=" + str(totalResults)
 
         outputCSV(testCase, True, totalString, searchThreeTotal)
 
@@ -49,6 +49,6 @@ def run_test_keywordSearch():
             searchThreeTotal)
         print("The toal Gumtree listings: ", total)
 
-        totalString = "<=" + str(total)
+        totalString = "<=" + str(totalResults)
 
         outputCSV(testCase, False, totalString, searchThreeTotal)
