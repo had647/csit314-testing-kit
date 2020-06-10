@@ -23,7 +23,7 @@ def run_test_radius():
 
         # Preparing Variables for output
         testCase = "Results Displayed when radius of location is altered with radius being "
-        expectedResult = str(radius1Total) + "+"
+        expectedResult = ">= " + str(radius1Total)
 
         if radius_1 > radius_2:
             if radius1Total > radius2Total:

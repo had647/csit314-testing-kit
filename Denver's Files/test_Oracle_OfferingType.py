@@ -1,4 +1,4 @@
-from Denver_files.testingResultsFoundByFeaturedAds import
+from Denver_files.testingResultsFoundByOfferingType import
 
 premium = getTotalResultsFound("https://www.gumtree.com.au/s-ads?premiumAds=y")
 totalPremium = extractTotalIntValue(premium)

@@ -43,7 +43,6 @@ def categorySearch():
     return category_num
 
 
-
 def generalSearch():
 
     url = "https://www.gumtree.com.au/s-search.html"
