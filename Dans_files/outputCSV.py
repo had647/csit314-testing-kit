@@ -1,11 +1,18 @@
 import csv
 
-def outputCSV(testCase, outcome, expectedResult, actualResult):
+# This will overwrite the file to setup just the headers
+def setupCSVHeaders():
     with open("output.csv", "w") as csv_file:
-        csv_app = csv.writer(csv_file)
-        csv_app.writerow(["Test Case", "Failed", "Expected Result", "Actual Result"])
-        csv_app.writerow([testCase, outcome, expectedResult, actualResult])
+        csv_wr = csv.writer(csv_file)
+        csv_wr.writerow(["Test Case", "Failed", "Expected Result", "Actual Result"])
+        csv_file.close()
 
+# This appends new line each time it is called
+def outputCSV(testCase, outcome, expectedResult, actualResult):
+    with open("output.csv", "a") as csv_file:
+        csv_app = csv.writer(csv_file)
+        csv_app.writerow([testCase, outcome, expectedResult, actualResult])
+        csv_file.close()
 
 
 
