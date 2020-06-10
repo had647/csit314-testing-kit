@@ -19,5 +19,3 @@ def run_test_freeListing():
     else:
         print("All listings are free")
         outputCSV(testCase, True, "Free", "Free")
-
-run_test_freeListing()
