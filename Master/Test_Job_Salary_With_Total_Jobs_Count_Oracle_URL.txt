@@ -1,0 +1,25 @@
+{
+   "AllJobs":"https://www.gumtree.com.au/s-jobs/c9302?ad=offering",
+   "SalaryTypes":[
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/salarytype-hourlyrate/c9302?ad=offering",
+         "SalaryType":"Hourly"
+      },
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/salarytype-annualsalarypackage/c9302?ad=offering",
+         "SalaryType":"Annual Salary Package"
+      },
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/salarytype-annualsalarycommission/c9302?ad=offering",
+         "SalaryType":"Annual Salary + Commission"
+      },
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/salarytype-commissiononly/c9302?ad=offering",
+         "SalaryType":"Commission Only"
+      },
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/salarytype-unpaid/c9302?ad=offering",
+         "SalaryType":"Unpaid"
+      }
+   ]
+}

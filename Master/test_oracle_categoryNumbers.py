@@ -1,5 +1,5 @@
 from Master.outputCSV import outputCSV
-from lw803_files.result_getter import keyword_checker, category_counter
+from Master.collectRequiredResults import *
 
 
 def run_test_CategoryNumber():
