@@ -21,6 +21,6 @@ def extractTotalIntValue(result):
     total = int(result.split()[0])
     return total
 
-def calculateTotal(fixed, negotiable, free, swapTrade, driveAway):
+def calculateTotalPriceTypes(fixed, negotiable, free, swapTrade, driveAway):
   totalFromPriceTags = fixed + negotiable + free + swapTrade + driveAway
   return totalFromPriceTags
