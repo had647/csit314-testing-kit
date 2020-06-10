@@ -4,13 +4,13 @@ import csv
 class MyTestCase(unittest.TestCase):
     def test_outputCSV(self):
         testCase = "This is a test"
-        outcome = "False"
+        outcome = "True"
         expectedResult = 1004
         actualResult = 1005
 
         with open("output_unitTest.csv", "w", newline="") as csv_file:
             csv_wr = csv.writer(csv_file)
-            csv_wr.writerow(["Test Case", "Failed", "Expected Result", "Actual Result"])
+            csv_wr.writerow(["Test Case", "True", "Expected Result", "Actual Result"])
             csv_wr.writerow([testCase, outcome, expectedResult, actualResult])
             csv_file.close()
 

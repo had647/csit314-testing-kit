@@ -14,7 +14,3 @@ def outputCSV(testCase, outcome, expectedResult, actualResult):
         csv_app.writerow([testCase, outcome, expectedResult, actualResult])
         csv_file.close()
 
-
-
-
-

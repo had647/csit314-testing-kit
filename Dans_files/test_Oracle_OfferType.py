@@ -55,4 +55,3 @@ def run_test_offerType():
               calculateTotalTypes(sydOfferingTotal, sydWantedTotal))
         print("The total Gumtree provided: ", totalSydney)
         outputCSV(testCase, False, totalSydney, calculateTotalTypes(sydOfferingTotal, sydWantedTotal))
-
