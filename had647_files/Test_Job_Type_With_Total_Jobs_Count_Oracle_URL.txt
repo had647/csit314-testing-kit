@@ -1,0 +1,37 @@
+{
+   "AllJobs":"https://www.gumtree.com.au/s-jobs/c9302?ad=offering",
+   "JobTypes":[
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/jobtype-casual/c9302?ad=offering",
+         "JobType":"Casual"
+      },
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/jobtype-temp/c9302?ad=offering",
+         "JobType":"Temp"
+      },
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/jobtype-contract/c9302?ad=offering",
+         "JobType":"Contract"
+      },
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/jobtype-parttime/c9302?ad=offering",
+         "JobType":"Part-time"
+      },
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/jobtype-fulltime/c9302?ad=offering",
+         "JobType":"Full-time"
+      },
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/jobtype-graduate/c9302?ad=offering",
+         "JobType":"Graduate"
+      },
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/jobtype-internship/c9302?ad=offering",
+         "JobType":"Internship"
+      },
+      {
+         "url":"https://www.gumtree.com.au/s-jobs/jobtype-volunteer/c9302?ad=offering",
+         "JobType":"Volunteer"
+      }
+   ]
+}
