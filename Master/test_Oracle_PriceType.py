@@ -26,7 +26,7 @@ def run_test_priceType():
     totalDriveAway = extractTotalIntValue(driveAway)
 
     # Preparing Variables for output
-    testCase = "Results Displayed when PriceType of query is altered."
+    testCase = "Results displayed when PriceType of query is altered."
 
     if calculateTotalPriceTypes(totalFixed, totalNegotiable, totalFree, totalSwapTrade, totalDriveAway) == total :
         print("\nThe Test Passed!")

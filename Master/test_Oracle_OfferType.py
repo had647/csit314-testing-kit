@@ -28,7 +28,7 @@ def run_test_offerType():
     griffWantedTotal = extractTotalIntValue(griffWanted)
 
     # Preparing Variables for output
-    testCase = "Results Displayed when OfferType of query is altered. Location is set to "
+    testCase = "Results displayed when OfferType of query is altered. Location is set to "
 
     if calculateTotalTypes(griffOfferingTotal, griffWantedTotal) == totalGriff:
         print("\nThe Test Passed!")
